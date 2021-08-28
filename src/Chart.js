@@ -10,6 +10,7 @@ export default function Chart() {
     setPersons([]);
   }
   const removeId=(id)=>{
+    console.log("remove")
     setPersons(p=>p.filter((a)=>a.id!=id));
   }
 useEffect(()=>{
