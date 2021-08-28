@@ -44,11 +44,13 @@ h2 {
   margin: auto;
 }
 button.toggle{
-  border: 1px solid red;
+  color:blue;
+ border: 0px solid transparent;
   background-color: transparent;
   display: inline;
 }
-button.toggle:hover{color:blue;}
+button.toggle:hover{color:rgb(4, 4, 216);cursor: pointer;}
+p.info{text-align: unset;}
 @media screen and (min-width: 760px) {
   .person {
     display: flex;

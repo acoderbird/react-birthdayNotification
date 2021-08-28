@@ -13,7 +13,7 @@ export default function Person(props) {
       <div className={styles.name}>
       <h2>{props.name}</h2>
       <p>{new Date().getFullYear()-new Date(props.dob).getFullYear()} years</p>
-      <p>{toggle?props.info.substring(0,100)+"...":props.info+"..."}
+      <p className={styles.info}>{toggle?props.info.substring(0,100)+"...":props.info+"..."}
       <button className={styles.toggle}
       onClick={()=>setToggle(!toggle)}>{toggle?"Read more":"Show less"}</button></p>
       </div>
