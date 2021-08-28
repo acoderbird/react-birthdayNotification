@@ -31,7 +31,7 @@ export default function Friends() {
   }
   return (<div>
     <h1>Friends list {currentIndex}</h1>
-     <Person name={currentF?.name} dob={currentF?.dob}
+     <Person name={currentF?.name} dob={currentF?.dob} NoInfoFlag={true}
        image={currentF?.image}/>
        <p >
          <span style={{cursor:"pointer"}} onClick={previousF}>&lt;</span>

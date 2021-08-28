@@ -15,9 +15,10 @@ export default function Person(props) {
       <p>{new Date().getFullYear()-new Date(props.dob).getFullYear()} years</p>
       </div>
       </div>
-      <p className={styles.info}>{toggle?props.info?.substring(0,100)+"...":props.info+"..."}
+      {props.NoInfoFlag?null:<p className={styles.info}>{toggle?props.info?.substring(0,100)+"...":props.info+"..."}
       <button className={styles.toggle}
-      onClick={()=>setToggle(!toggle)}>{toggle?"Read more":"Show less"}</button></p>
+      onClick={()=>setToggle(!toggle)}>{toggle?"Read more":"Show less"}</button></p>}
+      
       <div className={styles.close} onClick={()=>props.removeFromList(props.id)}>x</div>
     </div>
   );
