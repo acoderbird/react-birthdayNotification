@@ -4,8 +4,8 @@ import styles from "./myPerson.module.css";
 export default function Person(props) {
   const url ="url("+props.image+")";
   return (
-    <div className={styles.person}>
-      <div>
+    <div className={styles.container}>
+      <div className={styles.person}>
       <div className={styles.image}
       style={{backgroundImage: url}}>
       </div>

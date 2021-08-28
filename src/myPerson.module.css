@@ -1,5 +1,7 @@
-.person {
+.container{
   position: relative;
+}
+.person {
   box-sizing: border-box;
   width: 100%;
   border-radius: 5px;
@@ -22,6 +24,9 @@
   top: 0;
   right: 0;
   font-size: 20px;
+}
+.close:hover{
+  cursor: pointer;
 }
 p {
   color: gray;
