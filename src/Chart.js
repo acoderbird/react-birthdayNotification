@@ -28,6 +28,6 @@ useEffect(()=>{
       return <Person info={p.info} name={p.name} dob={p.dob} key={p.id}
       id={p.id} removeFromList={removeId} image={p.image}></Person>
     })}
-    <button onClick={clearAll}>Clear All</button></div>
+    <button className={styles.clear} onClick={clearAll}>Clear All</button></div>
   );
 }
