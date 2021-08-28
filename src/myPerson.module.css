@@ -1,7 +1,5 @@
 .container{
   position: relative;
-}
-.person {
   box-sizing: border-box;
   width: 100%;
   border-radius: 5px;
@@ -10,7 +8,7 @@
   background-color: rgb(247, 221, 243);
   box-shadow: 2px 2px 5px 2px rgb(163, 165, 172);
 }
-.person:hover {
+.container:hover {
   background-color: rgb(248, 206, 242);
   cursor: pointer;
 }
