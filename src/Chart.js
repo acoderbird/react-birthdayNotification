@@ -9,6 +9,9 @@ export default function Chart() {
   const clearAll=()=>{
     setPersons([]);
   }
+  const removeId=(id)=>{
+    setPersons(p=>p.filter((a)=>a.id!=id));
+  }
 useEffect(()=>{
   console.log("useeffect ran once")
  
@@ -21,7 +24,8 @@ useEffect(()=>{
   return (<div className={styles.display}>
     <p><span>{persons.length}</span> Birthdays this month</p>
     {persons.map((p)=>{
-      return <Person name={p.name} dob={p.dob} key={p.id} image={p.image}></Person>
+      return <Person name={p.name} dob={p.dob} key={p.id}
+      id={p.id} removeFromList={removeId} image={p.image}></Person>
     })}
     <button onClick={clearAll}>Clear All</button></div>
   );

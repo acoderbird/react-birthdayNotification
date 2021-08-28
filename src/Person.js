@@ -5,6 +5,7 @@ export default function Person(props) {
   const url ="url("+props.image+")";
   return (
     <div className={styles.person}>
+      <div>
       <div className={styles.image}
       style={{backgroundImage: url}}>
       </div>
@@ -12,6 +13,8 @@ export default function Person(props) {
       <h2>{props.name}</h2>
       <p>{new Date().getFullYear()-new Date(props.dob).getFullYear()} years</p>
       </div>
+      </div>
+      <div className={styles.close} onClick={()=>props.removeFromList(props.id)}>x</div>
     </div>
   );
 }
