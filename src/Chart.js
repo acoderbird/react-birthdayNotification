@@ -25,7 +25,7 @@ useEffect(()=>{
   return (<div className={styles.display}>
     <p><span>{persons.length}</span> Birthdays this month</p>
     {persons.map((p)=>{
-      return <Person name={p.name} dob={p.dob} key={p.id}
+      return <Person info={p.info} name={p.name} dob={p.dob} key={p.id}
       id={p.id} removeFromList={removeId} image={p.image}></Person>
     })}
     <button onClick={clearAll}>Clear All</button></div>

@@ -43,7 +43,11 @@ h2 {
   height: 100px;
   margin: auto;
 }
-
+button.toggle{
+  background-color: transparent;
+  display: inline;
+}
+button.toggle:hover{color:blue;}
 @media screen and (min-width: 760px) {
   .person {
     display: flex;

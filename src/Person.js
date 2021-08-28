@@ -1,7 +1,8 @@
-import React from "react";
+import React,{useState} from "react";
 import styles from "./myPerson.module.css";
 
 export default function Person(props) {
+  const [toggle,setToggle]=useState(true);
   const url ="url("+props.image+")";
   return (
     <div className={styles.container}>
@@ -12,6 +13,8 @@ export default function Person(props) {
       <div className={styles.name}>
       <h2>{props.name}</h2>
       <p>{new Date().getFullYear()-new Date(props.dob).getFullYear()} years</p>
+      <p>{toggle?props.info.substring(0,100)+"...":props.info}
+      <button className={styles.toggle}>{toggle?"Read more":"Show less"}</button></p>
       </div>
       </div>
       <div className={styles.close} onClick={()=>props.removeFromList(props.id)}>x</div>
